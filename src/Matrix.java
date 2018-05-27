@@ -50,7 +50,7 @@ public class Matrix {
                 }
             }
             for(int i=0;i<A.length;i++) {
-                if(i == r) {
+                if(i == r || A[i][c] == 0) {
                     continue;
                 }
                 float multiplier = A[i][c] / A[r][c];
@@ -166,6 +166,20 @@ public class Matrix {
 
     public static boolean isSquare(float A[][]) {
         return A.length == A[0].length;
+    }
+
+    public static boolean isSame(float A[][], float B[][]) {
+        if(!isSameDimension(A, B)) {
+            return false;
+        }
+        for(int row=0;row<A.length;row++) {
+            for(int col=0;col<A[row].length;col++) {
+                if(A[row][col] != B[row][col]) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
     public static void printMatrix(float A[][]) {
