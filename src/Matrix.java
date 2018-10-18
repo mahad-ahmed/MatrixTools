@@ -183,6 +183,9 @@ public class Matrix {
     }
 
     public static void printMatrix(float A[][]) {
+        if(A.length < 1) {
+            return;
+        }
         for(int i=0; i < A[0].length;i++) {
             System.out.print("------");
         }
