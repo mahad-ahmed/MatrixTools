@@ -1,4 +1,4 @@
-public class Matrix {
+public class MatrixTools {
 
 //    if(isInvalidMatrix(A)) {
 //        return new float[][] {{Float.NaN}};
